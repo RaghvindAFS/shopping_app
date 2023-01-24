@@ -12,7 +12,7 @@ class ProductGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     final productsData = Provider.of<Products>(context);
     final products =
-        showFavs ? productsData.FavoritesItems : productsData.items;
+        showFavs ? productsData.favoritesItems : productsData.items;
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,

@@ -22,7 +22,9 @@ class Cart with ChangeNotifier {
   int get itemCount {
     return _items.length;
   }
-
+printFun(){
+  return debugPrint('printed cart');
+ }
   double get totalAmount {
     var total = 0.0;
     _items.forEach((key, CartItem) {

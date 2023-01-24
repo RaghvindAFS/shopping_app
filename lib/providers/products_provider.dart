@@ -54,7 +54,7 @@ class Products with ChangeNotifier {
     return [..._items];
   }
 
-  List<Product> get FavoritesItems {
+  List<Product> get favoritesItems {
     return _items.where((prodItem) => prodItem.isFavorite).toList();
   }
 

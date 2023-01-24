@@ -45,7 +45,11 @@ class Auth with ChangeNotifier {
         throw HttpException(responseData['error']['message']);
       }
       _token = responseData['idToken'];
+      print('token = $_token');
+
       _userId = responseData['localId'];
+      print('userId = $_userId');
+
       _expiryDate = DateTime.now().add(
         Duration(seconds: int.parse(responseData['expiresIn'])),
       );

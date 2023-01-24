@@ -23,6 +23,7 @@ class ProductItem extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
+    debugPrint('product.id ${product.id}');
             Navigator.of(context).pushNamed(
               ProductDetailScreen.routeName,
               arguments: product.id,
@@ -51,6 +52,7 @@ class ProductItem extends StatelessWidget {
           ),
           trailing: IconButton(
             onPressed: () {
+              print('called on press');
               cart.addItem(product.id, product.price, product.title);
               // Scaffold.of(context).showSnackBar(SnackBar(
               //     content: Text(
